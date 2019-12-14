@@ -1,48 +1,14 @@
-# s = "Пользователь вводит, отдельно, строку `s` и один символ `ch`. Необходимо выполнить поиск в строке `s` всех символов `ch`."
-s = 'вf b`ch` ch.'
+s = "chch c h Пользователь вводит, отдельно, строку `s` и один символ `ch`. Необходимо выполнить поиск в строке `s` всех символов `ch`."
 ch = 'ch'
-symb = 0
+symb = -1
+cnt = 0
 
-print('s = ' ,s)
+print('s = ', s, '\nSymbols IDs: ')
 
-
-print('sting = ', s.find(ch))
-
-for search in s:
-    i = search.find(ch)
-    print('i = ', i)
-    if i == ch:
-        symb += 1
-print(s[symb], i)
-
-
-
-
-
-# result = searchCH.find(ch)
-# print("result = ", ch, result)
-
-
-
-
-
-
-
-    # if ch in s:
-    #     print(i, ch)
-    #     i += 1
-
-# s.find(ch)
-# for ch in s:
-#     print(ch)
-
-    # if ch :
-    #     print(s.find(ch), symbol)
-# for ch in s:
-#     print(s.find(ch))
-
-# i = 1
-# for color in 'red', 'orange', 'yellow', 'green', 'cyan', 'blue', 'violet':
-#     print('#', i, ' color of rainbow is ', color, sep='')
-#     i += 1
-
+while True:
+    symb = s.find(ch, symb+1)
+    if symb < 0:
+        break
+    cnt +=1
+    print(symb, symb+1, sep=', ')
+print('Count of \'ch\' symbol:', cnt)
